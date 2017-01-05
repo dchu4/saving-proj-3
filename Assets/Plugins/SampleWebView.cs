@@ -25,7 +25,7 @@ using UnityEngine.UI;
 public class SampleWebView : MonoBehaviour
 {
 	public string Url;
-	public GUIText status;
+//	public GUIText status;
 	WebViewObject webViewObject;
 
 	GameObject appController;
@@ -41,14 +41,14 @@ public class SampleWebView : MonoBehaviour
 			cb: (msg) =>
 			{
 				Debug.Log(string.Format("CallFromJS[{0}]", msg));
-				status.text = msg;
-				status.GetComponent<Animation>().Play();
+//				status.text = msg;
+//				status.GetComponent<Animation>().Play();
 			},
 			err: (msg) =>
 			{
 				Debug.Log(string.Format("CallOnError[{0}]", msg));
-				status.text = msg;
-				status.GetComponent<Animation>().Play();
+//				status.text = msg;
+//				status.GetComponent<Animation>().Play();
 			},
 			ld: (msg) =>
 			{
