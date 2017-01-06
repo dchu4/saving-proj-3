@@ -57,9 +57,6 @@
      <Compile Include="Assets\JSON\JSONObject.cs" />
      <Compile Include="Assets\JSON\JSONTemplates.cs" />
      <Compile Include="Assets\JSON\VectorTemplates.cs" />
-     <Compile Include="Assets\LoadingBars\scripts\scene1.cs" />
-     <Compile Include="Assets\LoadingBars\scripts\scene2.cs" />
-     <Compile Include="Assets\LoadingBars\scripts\scene3.cs" />
      <Compile Include="Assets\SamplesResources\CloudReco\Scripts\CloudRecoEventHandler.cs" />
      <Compile Include="Assets\SamplesResources\CloudReco\Scripts\CloudRecoTrackableEventHandler.cs" />
      <Compile Include="Assets\SamplesResources\CloudReco\Scripts\CloudRecognitionEventHandler.cs" />

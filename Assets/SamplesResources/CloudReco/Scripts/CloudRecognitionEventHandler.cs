@@ -31,8 +31,6 @@ public class CloudRecognitionEventHandler : MonoBehaviour, ICloudRecoEventHandle
 	private GameObject mParentOfImageTargetTemplate;
 	private string recoURL;
 	private AudioSource audioSource;
-	private string ahoyVisit = "";
-	private string ahoyVisitor = "";
 	#endregion // PRIVATE_MEMBERS
 
 
@@ -69,6 +67,8 @@ public class CloudRecognitionEventHandler : MonoBehaviour, ICloudRecoEventHandle
 
 		// look up the gameobject containing the ImageTargetTemplate:
 		mParentOfImageTargetTemplate = ImageTargetTemplate.gameObject;
+
+		CameraDevice.Instance.SetFocusMode (CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
 	}
 	#endregion //MONOBEHAVIOUR_METHODS
 
@@ -114,22 +114,6 @@ public class CloudRecognitionEventHandler : MonoBehaviour, ICloudRecoEventHandle
 
 		Debug.Log (www.text);
 	}
-
-//	public IEnumerator PostEvent(){
-//		WWWForm form = new WWWForm();
-//
-//		Dictionary<string, string> headers = new Dictionary<string, string>();
-//
-//		headers.Add ("Content-Type", "application/x-www-form-urlencoded");
-//		headers.Add ("Ahoy-Visit", ahoyVisit);
-//		headers.Add ("Ahoy-Visitor", ahoyVisitor);
-//
-//		form.AddField ("name", "Track event from Unity ME!!!!!!!!!!!!!!");
-//		form.AddField ("user_id", 42);
-//
-//		WWW www = new WWW("http://unity-analytics.herokuapp.com/ahoy/events", form.data, headers);
-//		yield return www;
-//	}
 
 	#region ICloudRecoEventHandler_implementation
 	/// <summary>
@@ -235,6 +219,8 @@ public class CloudRecognitionEventHandler : MonoBehaviour, ICloudRecoEventHandle
 			JSONObject recoData = new JSONObject (targetSearchResult.MetaData);
 			string productID = StringCleanUp (recoData ["ProductID"].ToString ());
 			string url = StringCleanUp(recoData ["URL"].ToString ());
+
+			Debug.Log (url);
 
 			StartCoroutine(PostVisit(productID));
 
