@@ -1,0 +1,16 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="CloudRecognitionEventHandler">
+			<method name="StartScanning"/>
+		</type>
+	</assembly>
+	<assembly fullname="Assembly-CSharp-firstpass">
+		<type fullname="ExitScript">
+			<method name="ExitApp"/>
+			<method name="ExitApp"/>
+		</type>
+		<type fullname="SceneTransition">
+			<method name="SceneChange"/>
+		</type>
+	</assembly>
+</linker>

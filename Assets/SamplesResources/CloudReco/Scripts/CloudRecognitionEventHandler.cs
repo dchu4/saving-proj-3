@@ -52,6 +52,7 @@ public class CloudRecognitionEventHandler : MonoBehaviour, ICloudRecoEventHandle
 	public GameObject tapToStart;
 	public GameObject scanningAnimation;
 	public AudioClip scanningRegistered;
+	public GameObject circle;
 	AppController appController;
 	#endregion //PUBLIC_MEMBERS
 
@@ -78,6 +79,7 @@ public class CloudRecognitionEventHandler : MonoBehaviour, ICloudRecoEventHandle
 		{
 			cloudRecoBehaviour.RegisterEventHandler(this);
 			tapToStart.SetActive (false);
+			circle.SetActive (false);
 			scanningAnimation.SetActive (true);
 		}
 	}
@@ -101,13 +103,13 @@ public class CloudRecognitionEventHandler : MonoBehaviour, ICloudRecoEventHandle
 		return recoURL;
 	}
 
-	public IEnumerator PostVisit(string product_id){
+	public IEnumerator PostVisit(string product_sku){
 		WWWForm form = new WWWForm();
 
 		form.AddField ("device_unique_id", SystemInfo.deviceUniqueIdentifier.ToString());
 		form.AddField ("device_os", SystemInfo.operatingSystem.ToString());
 		form.AddField ("device_type", SystemInfo.deviceType.ToString());
-		form.AddField ("product_id", product_id);
+		form.AddField ("product_sku", product_sku);
 
 		WWW www = new WWW("http://tde-analytics.herokuapp.com/visits", form);
 		yield return www;
@@ -217,16 +219,16 @@ public class CloudRecognitionEventHandler : MonoBehaviour, ICloudRecoEventHandle
 		} else {
 			audioSource.PlayOneShot(scanningRegistered,1.0f);
 			JSONObject recoData = new JSONObject (targetSearchResult.MetaData);
-			string productID = StringCleanUp (recoData ["ProductID"].ToString ());
+			string productSku = StringCleanUp (recoData ["ProductSku"].ToString ());
 			string url = StringCleanUp(recoData ["URL"].ToString ());
 
 			Debug.Log (url);
 
-			StartCoroutine(PostVisit(productID));
+			StartCoroutine(PostVisit(productSku));
 
 			appController.SetRecoURL (url);
 
-			SceneManager.LoadScene ("WebView");
+			SceneManager.LoadScene ("WebViewScaled");
 		}
 
 		// First clear all trackables
