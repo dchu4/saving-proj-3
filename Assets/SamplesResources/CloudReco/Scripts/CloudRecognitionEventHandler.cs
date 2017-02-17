@@ -53,7 +53,7 @@ public class CloudRecognitionEventHandler : MonoBehaviour, ICloudRecoEventHandle
 	public GameObject scanningAnimation;
 	public AudioClip scanningRegistered;
 	public GameObject circle;
-	AppController appController;
+	public AppController appController;
 	#endregion //PUBLIC_MEMBERS
 
 	#region MONOBEHAVIOUR_METHODS
@@ -64,6 +64,8 @@ public class CloudRecognitionEventHandler : MonoBehaviour, ICloudRecoEventHandle
 	{
 		audioSource = GetComponent<AudioSource> ();
 		appController = GameObject.FindGameObjectWithTag ("AppController").GetComponent<AppController> ();
+//		appController.Load ();
+
 		mTrackableSettings = FindObjectOfType<TrackableSettings>();
 
 		// look up the gameobject containing the ImageTargetTemplate:
@@ -221,12 +223,16 @@ public class CloudRecognitionEventHandler : MonoBehaviour, ICloudRecoEventHandle
 			JSONObject recoData = new JSONObject (targetSearchResult.MetaData);
 			string productSku = StringCleanUp (recoData ["ProductSku"].ToString ());
 			string url = StringCleanUp(recoData ["URL"].ToString ());
-
-			Debug.Log (url);
+			string productName = StringCleanUp(recoData ["ProductName"].ToString ());
+			string productRetailer = StringCleanUp(recoData ["ProductRetailer"].ToString ());
 
 			StartCoroutine(PostVisit(productSku));
 
 			appController.SetRecoURL (url);
+			appController.SetRecoProductName (productName);
+			appController.SetRecoProductRetailer (productRetailer);
+
+			appController.AddToHistory ();
 
 			SceneManager.LoadScene ("WebViewScaled");
 		}

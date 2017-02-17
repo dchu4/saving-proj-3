@@ -4,15 +4,17 @@ timeCreated: 1485369295
 licenseType: Free
 TrueTypeFontImporter:
   serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
+  fontSize: 60
+  forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontName: Roboto
   fontNames:
   - Roboto
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d4c6de96c660142cea36a0863baeb2fd, type: 3}
+  - {fileID: 12800000, guid: 0d32158ea845443718148671694148ad, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

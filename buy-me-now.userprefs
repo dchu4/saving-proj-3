@@ -1,10 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SamplesResources/CloudReco/Scripts/CloudRecognitionEventHandler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AppController.cs">
     <Files>
-      <File FileName="Assets/SamplesResources/CloudReco/Scripts/CloudRecognitionEventHandler.cs" Line="83" Column="1" />
+      <File FileName="Assets/Scripts/UIManager.cs" Line="22" Column="9" />
+      <File FileName="Assets/SamplesResources/CloudReco/Scripts/CloudRecognitionEventHandler.cs" Line="64" Column="3" />
       <File FileName="Assets/Plugins/SceneTransition.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/SampleWebView.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SampleWebView.cs" Line="80" Column="1" />
+      <File FileName="Assets/Scripts/AppController.cs" Line="135" Column="26" />
+      <File FileName="Assets/Vuforia/Scripts/HistorySetup.cs" Line="13" Column="1" />
+      <File FileName="Assets/Scripts/WishlistSetup.cs" Line="9" Column="13" />
+      <File FileName="Assets/Scripts/ButtonStorage.cs" Line="17" Column="2" />
+      <File FileName="Assets/Scripts/ButtonGenerator.cs" Line="113" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
