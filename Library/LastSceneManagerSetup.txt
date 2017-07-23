@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/WebViewScaled.unity
+- path: Assets/Scenes/main-design.unity
   isLoaded: 1
   isActive: 1

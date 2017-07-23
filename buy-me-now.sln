@@ -1,13 +1,13 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{1FCAB05C-AC45-7E3A-6539-00C06527EA6F}") = "buy-me-now", "Assembly-CSharp-firstpass.csproj", "{109328B8-7EA8-E686-B038-FC34DA5E99D9}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "buy-me-now", "Assembly-CSharp-firstpass.csproj", "{109328B8-7EA8-E686-B038-FC34DA5E99D9}"
 EndProject
-Project("{1FCAB05C-AC45-7E3A-6539-00C06527EA6F}") = "buy-me-now", "Assembly-CSharp.csproj", "{E96565A9-182F-79DB-B3B4-1BA9ECC12D81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "buy-me-now", "Assembly-CSharp.csproj", "{E96565A9-182F-79DB-B3B4-1BA9ECC12D81}"
 EndProject
-Project("{1FCAB05C-AC45-7E3A-6539-00C06527EA6F}") = "buy-me-now", "Assembly-CSharp-Editor-firstpass.csproj", "{F48FE1B6-D32B-BF5A-CD7D-8C0218AFAFE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "buy-me-now", "Assembly-CSharp-Editor-firstpass.csproj", "{F48FE1B6-D32B-BF5A-CD7D-8C0218AFAFE8}"
 EndProject
-Project("{1FCAB05C-AC45-7E3A-6539-00C06527EA6F}") = "buy-me-now", "Assembly-CSharp-Editor.csproj", "{52590329-0649-1CF3-9323-3D342D8500DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "buy-me-now", "Assembly-CSharp-Editor.csproj", "{52590329-0649-1CF3-9323-3D342D8500DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
